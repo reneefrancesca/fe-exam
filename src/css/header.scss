@@ -1,0 +1,26 @@
+.header__text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #101010;
+    text-decoration: none;
+    background: none;
+    border: none;
+    position: relative;
+    left: 14px;
+    top: 5px;
+    letter-spacing: 1.8px;
+}
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 34px 0;
+}
+.header__content {
+    width:50%;
+    &:last-child {
+        text-align: right;
+    }
+}
+

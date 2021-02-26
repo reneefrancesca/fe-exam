@@ -1,0 +1,38 @@
+.register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 90px 0;
+}
+.register__heading {
+    font-size: 30px;
+    padding-bottom: 55px;
+    margin: 0;
+}
+.register__inputs {
+    display: flex;
+    width: 460px;
+    height: 60px;
+    margin: 5px 0 20px;
+}
+.register__texts {
+    font-size: 18px;
+}
+p.register__texts {
+    color: #101010;
+    margin: 0;
+    padding: 20px 0 50px;
+}
+.register__link {
+    color: #101010;
+    text-decoration: none;
+    font-weight: 700;
+}
+.register__button {
+    display: block;
+    background: #101010;
+    color: #ffffff;
+    font-size: 20px;
+    border: none;
+}

@@ -1,0 +1,35 @@
+.blogcomment {
+    border-top: 2px solid #b7b7b7;
+    margin-bottom: 70px;
+}
+.blogcomment__title {
+    font-size: 50px;
+}
+.blogcomment__container {
+    display: inline-block;
+    background-color: #f5f5f5;
+    padding: 47px 30px;
+    margin-bottom: 40px;
+}
+.blogcomment__content {
+    white-space: pre-line;
+    line-height: 40px;
+}
+.blogcomment__textarea {
+    width: 100%;
+    font-size: 19px;
+    height: 138px;
+    padding: 30px;
+    resize: none;
+    box-sizing:border-box;
+    margin-bottom: 25px;
+}
+.blogcomment__button {
+    border: none;
+    padding: 24px 67px;
+    background: #101010;
+    font-size: 20px;
+    color: #ffffff;
+    display: flex;
+    margin-left: auto;
+}

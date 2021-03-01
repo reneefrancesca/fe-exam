@@ -1,6 +1,7 @@
 .blogcomment {
     border-top: 2px solid #b7b7b7;
     margin-bottom: 70px;
+    overflow: hidden;
 }
 .blogcomment__title {
     font-size: 50px;
@@ -10,6 +11,7 @@
     background-color: #f5f5f5;
     padding: 47px 30px;
     margin-bottom: 40px;
+    width: 100%;
 }
 .blogcomment__content {
     white-space: pre-line;

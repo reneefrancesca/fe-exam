@@ -9,6 +9,7 @@ query GetPosts{posts(pagination: {
     title
     content
     image
+    createdAt
   }
 }
 `;

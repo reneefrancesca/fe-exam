@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Login from './components/Login';
-//import Register from './Views/Register';
 import Blog from './components/Blog';
+//import Register from './Views/Register';
 import Hero from './components/Hero';
 import News from './components/News';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import './App.css';
 
 const Content = ({isLogin}) => {
 
@@ -61,17 +61,24 @@ function App() {
  
 
   return (
-    <Router>
-       <div>
-        {/* <Blog /> */}
-        {/* <Register /> */}
-        <Header onLoginClick={handleLoginClick}/>
-        <Content isLogin={isLogin}/>
-        <News />
-        <Contact /> 
-        <Footer />
-      </div>
-    </Router>
+    <BrowserRouter>
+        <div>
+          {/* <Blog /> */}
+          {/* <Register /> */}
+          <Header onLoginClick={handleLoginClick}/>
+          <Switch>
+            <Route path="/" exact>
+                <Content isLogin={isLogin}/>
+                <News />
+            </Route>       
+            <Route path="/blog/:id">
+                <Blog />
+            </Route>
+          </Switch>  
+          <Contact /> 
+          <Footer />
+        </div>
+    </BrowserRouter>
   );
 }
 

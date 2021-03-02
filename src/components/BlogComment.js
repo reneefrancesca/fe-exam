@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Moment from 'moment';
 
 const BlogComment = (props) => {
     return (
@@ -6,12 +7,13 @@ const BlogComment = (props) => {
             <h3 className="blogcomment__title">COMMENT</h3>
             {
                 props.contents.map(content => {
+                    let comment_date = Moment(`${content.createdAt}`).fromNow();
                     return (
                         <div className="blogcomment__container">
                             <p className="blogcomment__content">
                                 {content.content}
                             </p>
-                            <small>{content.createdAt}</small>
+                            <small>{comment_date}</small>
                         </div>
                     );
                 })

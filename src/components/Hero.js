@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import images from './SliderImages';
 import Arrows from './Arrows';
 import Dots from './Dots';
 import SliderContent from './SliderContent';
@@ -12,7 +11,7 @@ export const Hero = () => {
     const sliderContainer = useRef(null);
     const sliderImages = useRef(null);
 
-    const autoplay = (initial) => {
+    const sliderDisplay = (initial) => {
         let slider = {
             hero: sliderContainer.current,
             main: sliderImages.current,
@@ -80,7 +79,6 @@ export const Hero = () => {
             slideDetails.hero.classList.add('prev');
         }
         setActiveIndex(slideDetails.activeIndex);
-        console.log(`changeSlide: ${slideDetails.activeIndex}`);
        
         removeClasses(slideDetails.items, ['prev', 'active']);
     
@@ -107,12 +105,9 @@ export const Hero = () => {
         setActiveIndex(id);
         slideDetails.activeIndex = id;
     }
-
-
-    console.log(`activeIndex: ${activeIndex}`);
  
     useEffect(() => {     
-        autoplay(true);
+        sliderDisplay(true);
     }, []);
     return (
         <div className="slider-container" ref={sliderContainer}>
